@@ -22,7 +22,7 @@ public class ServiceController {
     	log.debug("Running Service");
     	
     	ResultData rs = new ResultData();
-    	rs.setMessage("This is a good message");
+    	rs.setMessage("Cloud Foundry Service on Java using Spring");
     	rs.setSuccess(true);
     	
     	return rs;
