@@ -1,12 +1,13 @@
 package com.sap.vean.cf.samples;
 
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sap.vean.cf.samples.model.ResultData;
 
 @Controller
 @RequestMapping("/")
@@ -16,14 +17,15 @@ public class ServiceController {
 
    
     @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody JSONObject getData() {
+    public @ResponseBody ResultData getData() {
     	
     	log.debug("Running Service");
     	
-    	JSONObject result = new JSONObject();
-    	result.put("result", "ok");
+    	ResultData rs = new ResultData();
+    	rs.setMessage("This is a good message");
+    	rs.setSuccess(true);
     	
-    	return result;
+    	return rs;
      
     }
 }
