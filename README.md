@@ -1,4 +1,4 @@
-# CloudFoundry Example based on a Simple Servlet
+# CloudFoundry Example based on Spring
 
 There are many ways how to build services with java on cloud foundry. This option is using spring and the spring boot starter lib to create a very lightweight service module. It only needs a ServiceStart class that runs the BootStarter and the service class that then provides the service.    
 
